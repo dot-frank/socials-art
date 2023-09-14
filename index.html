@@ -13,7 +13,7 @@
         const imageContainer = document.getElementById("imageContainer");
 
         // Replace 'your-username' and 'your-repo' with your GitHub username and repository name.
-        const githubRepoUrl = "https://raw.githubusercontent.com/dot-frank/socials-art/main/images/"";
+        const githubRepoUrl = "https://raw.githubusercontent.com/dot-frank/socials-art/main/images/";
 
         // List of image file names in your GitHub repository's 'images' folder.
         const imageFileNames = [
@@ -23,10 +23,11 @@
 
         imageFileNames.forEach((fileName) => {
             const img = document.createElement("img");
-            img.src = `${socials-art}${Frank_Dot_Banner.jpg}`;
+            img.src = `${githubRepoUrl}${fileName}`;
             img.alt = fileName;
             imageContainer.appendChild(img);
         });
     </script>
 </body>
 </html>
+
