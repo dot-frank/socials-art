@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Image Gallery</title>
+    <title>Gallery</title>
 </head>
 <body>
     <h1>My Image Gallery</h1>
-    <div id="imageContainer">
-        <!-- Replace 'dot-frank' with your GitHub username, 'socials-art' with your repository name, and 'Frank_Dot_Banner.jpg' with your image file name. -->
-        <img src="https://github.com/dot-frank/socials-art/raw/main/Frank_Dot_Banner.jpg" alt="Frank_Dot_Banner.jpg">
-    </div>
+    <div id="imageContainer"></div>
+
+    <script>
+        const imageContainer = document.getElementById("imageContainer");
+
+        // Replace 'your-username' and 'your-repo' with your GitHub username and repository name.
+        const githubRepoUrl = "https://github.com/dot-frank/socials-art/blob/main/images/Frank_Dot_Banner.jpg";
+
+        // List of image file names in your GitHub repository's 'images' folder.
+        const imageFileNames = [
+            "Frank_Dot_Banner.jpg",
+            // Add more image file names as needed.
+        ];
+
+        imageFileNames.forEach((fileName) => {
+            const img = document.createElement("img");
+            img.src = `${githubRepoUrl}${fileName}`;
+            img.alt = fileName;
+            imageContainer.appendChild(img);
+        });
+    </script>
 </body>
 </html>
